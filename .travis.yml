@@ -15,7 +15,7 @@ script:
 deploy:
   provider: s3
   bucket: "chrisipowellblog"
-  local_dir: rel/chrisipowell_api/releases/0.0.1/chrisipowell_api.tar.gz
+  local_dir: rel/chrisipowell_api/releases/0.0.1/
   skip_cleanup: true
   region: "eu-west-1"
   acl: private
