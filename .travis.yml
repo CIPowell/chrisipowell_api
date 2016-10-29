@@ -9,7 +9,7 @@ script:
   - mix local.hex --force
   - mix deps.get
   - mix test
-  - mix compile
+  - MIX_ENV=prod mix compile
   - MIX_ENV=prod mix release
 
 deploy:
