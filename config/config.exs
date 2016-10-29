@@ -12,7 +12,8 @@ config :chrisipowell_api, ChrisipowellApi.Endpoint,
   render_errors: [view: ChrisipowellApi.ErrorView, accepts: ~w(json)],
   pubsub: [name: ChrisipowellApi.PubSub,
            adapter: Phoenix.PubSub.PG2],
-  gettext: ChrisipowellApi.Gettext, default_locale: "en"
+  gettext: ChrisipowellApi.Gettext, default_locale: "en",
+  ecto_repos: [ChrisIPowellApi.Repo]
 
 # Configures Elixir's Logger
 config :logger, :console,

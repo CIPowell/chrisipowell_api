@@ -13,6 +13,12 @@ config :chrisipowell_api, ChrisipowellApi.Endpoint,
   check_origin: false,
   watchers: []
 
+config :chrisipowell_api, ChrisipowellApi.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  database: "chrisipowell_api_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

@@ -1,41 +1,31 @@
 language: elixir
 elixir:
-  - 1.3.4
+- 1.3.4
 otp:
-  - 19.0.0
-
+- 19.0.0
 script:
-  - mix local.rebar --force # for Elixir 1.3.0 and up
-  - mix local.hex --force
-  - mix deps.get
-  - mix test
-  - MIX_ENV=prod mix compile
-  - MIX_ENV=prod mix release
-
+- mix local.rebar --force
+- mix local.hex --force
+- mix deps.get
+- mix test
+- mix compile
+- MIX_ENV=prod mix release
 deploy:
-  provider: s3
-  bucket: "chrisipowellblog"
-  local_dir: rel/chrisipowell_api/releases/0.0.1/
+- provider: s3
+  access_key_id: AKIAJYVWMIGTHLUTVK6A
+  secret_access_key: &1
+    secure: bIQSElWpsJFtPcT9HR/zH1rd6wJKH5+qfud/flGVQffMMH5wWaPI9s1YaWZfLMM28+ySjRgq4vpS5l2kJnx4F0nkPtW8/Kxwd44s425+mPPJXYzIdmH65YW72liJfNOwfgJQFHdQ0uPh93RFLpDEaXagNSYju4R3OgiZsffWYIS0BIYRUbfY1APPXZEeBxJo7Y38rsMX6IepOlBXW4P4tU32TDBs9mbC+8ixdkmeZY/qsrWz9Q2VJ79WN5xnXSR/VrYd5HrFzqdXb7BvYJ6f76zcGsrDtKrMoBSY6qdUX7+iK1DNfDzEw06BRktBO/DEktdccCc30nQG530EPsrYn16E9Psfk4DMkgeWZnsSrXQM5PpxBdC2m0dAgbkZbP3JbVvO+FCIaPgIcsPuJ7ogn6MMagjpKa6jv4CMG1F+JVgC4uDHFPp2fBLPXl17I7j9sLfFGATUMd/xcQeRXc3stTs5Sin6coiDu7HHg+yNi7Ih4wAMlB+Gv1qmM3QOVclmuxXjx42jVtKFvMzaCMm0+cmM1H5iOeRtLqa80Uj44ucc40kzSSNo78mciwGpFJAPd1+fCZAG+Q8wqILoqbG88XTefVSZk5MzSiSCqW9uHC+0vuwTDP0e6/qUvnH/96PMsgWXltMEXK/sewOLc/eduGBaeS9cgKSXkzLZcREy74k=
+  local_dir: rel/chrisipowell_api/releases/0.0.1
   skip_cleanup: true
-  region: "eu-west-1"
-  acl: private
-  cache_control: "max-age=86400"
-  access_key_id:
-    secure: Z+O8gii3nwPqH1IlAW/Be1R0hX+38yVyHvRKj58GkjMPd5RXwUmqNbqDvRWzYpG2pbbd8Eje5O2CUMaZ4K45/CSJ3+vHRxkt1ElpyVKZk1C8Cq4KFJyOxjXEgGud+zcvpDuTnDeyw98H+Zf7D6c+tSfNV50OfH3G86rEfcsf2F1R82woNR7dRe6QMtZAxFpuB8lJAOtiIFJYwm8/WGf4BkzC2wnqSzs1soLQ0vjB6Oys7mKMaPFOm7Q10OZdHzD8/qhlUNSftuG8kk/k3vg6E0dZMMLKBlptCl47wiugO3slMsTzU+GmLrQS1egdmryNu/UGnOdL522qc6oRUZPc/uIFxdjQgzP2J5LwrBDSC4rNiqZ+0VT+JDgfdNg64JB9Kg1kzIiPI9OFfkQJF1UyQ7xwCNpx6taSVeMakKpS51n8MjQM2bQ7NutgV4PYIsStz9a8CHF1HwIgxgjkGLj5+kKNtqtY0LuebhyVlSmQX51cpeqcq98yUQFHmGgqXO+dMBu/XkN7lCcstZiO5C5CjfMbTxRdtgQVH13mfkB6JvZCHDJJyXe/WbkIXJbD2fVCwgoQKffR4xf3LfjxtDLFwRzG+TUfOk0wIpiPGNK8RzEQ4U5kxw7YBJ60WwiXbzW1lYN3SwR2eyOASoKT/abjee3jd0WBiC1tiPS+kbK5GXc=
-  secret_access_key:
-    secure: SM3Xo9nW5luKC/Y2L5hq7RHp9v62qANig8oSGVeoRrQP7vwuj8uhuHrgPhP5MFkj/6/rLU7WTGn2LIqb8Q4a3DBYEXnveE5icrpmnta0tOWzvVELo1S6zwBY3CI27Fn8hNXtGqxUwUqzXvhPjpQX8x+fnQdINjQmn1U1+Y/n5pz255kb+a1CdIExzPmkUg2w25feUcYsUBb/p2MJr5SNWvopsDawsdjYK5owAcdWI3vWDihmoGvrkNqWlkh5FTjFC3H6Q8sOoSwR7YkPD2TQjjKpYv1Hw3suI4LparIETDBuaIiwo3JSQSWBIfgmaQ4bURQ5TqXVuvBLPg4a/7QtVLDQzd0NseR4XEQ/Mf9/iVA9euGyM5omO2Tklo7DnUY9fVlYERFWFPdpwdMkzkGzsp5FkoBqWb1z3vQFDF5JJjKjhKud15LA2zJG7YvAD+j6DWuxctA4j1ZmwCBwGVH/rQ1knd/foCGvQgFt1yK2L8CwdcszZHqtnx7EVJI3m1JWd1JGjMijl2e1Tu6K47miCDnq4DiwyOf8tNJlulUM//tWyv/3U7k33dX3phlorNaxwXcykWKr46dxy6Lq5qU1zvtp9cQJj6SzB0LQB3+EkMXvosHGtPDm5SxTcrWNy4NbtT+QoSdZmN/zQNOkQhJQ8dVb1bqVt/OUppdBRJPPRT4=
-# deploy:
-#   provider: codedeploy
-#   access_key_id:
-#     secure: Z+O8gii3nwPqH1IlAW/Be1R0hX+38yVyHvRKj58GkjMPd5RXwUmqNbqDvRWzYpG2pbbd8Eje5O2CUMaZ4K45/CSJ3+vHRxkt1ElpyVKZk1C8Cq4KFJyOxjXEgGud+zcvpDuTnDeyw98H+Zf7D6c+tSfNV50OfH3G86rEfcsf2F1R82woNR7dRe6QMtZAxFpuB8lJAOtiIFJYwm8/WGf4BkzC2wnqSzs1soLQ0vjB6Oys7mKMaPFOm7Q10OZdHzD8/qhlUNSftuG8kk/k3vg6E0dZMMLKBlptCl47wiugO3slMsTzU+GmLrQS1egdmryNu/UGnOdL522qc6oRUZPc/uIFxdjQgzP2J5LwrBDSC4rNiqZ+0VT+JDgfdNg64JB9Kg1kzIiPI9OFfkQJF1UyQ7xwCNpx6taSVeMakKpS51n8MjQM2bQ7NutgV4PYIsStz9a8CHF1HwIgxgjkGLj5+kKNtqtY0LuebhyVlSmQX51cpeqcq98yUQFHmGgqXO+dMBu/XkN7lCcstZiO5C5CjfMbTxRdtgQVH13mfkB6JvZCHDJJyXe/WbkIXJbD2fVCwgoQKffR4xf3LfjxtDLFwRzG+TUfOk0wIpiPGNK8RzEQ4U5kxw7YBJ60WwiXbzW1lYN3SwR2eyOASoKT/abjee3jd0WBiC1tiPS+kbK5GXc=
-#   secret_access_key:
-#     secure: SM3Xo9nW5luKC/Y2L5hq7RHp9v62qANig8oSGVeoRrQP7vwuj8uhuHrgPhP5MFkj/6/rLU7WTGn2LIqb8Q4a3DBYEXnveE5icrpmnta0tOWzvVELo1S6zwBY3CI27Fn8hNXtGqxUwUqzXvhPjpQX8x+fnQdINjQmn1U1+Y/n5pz255kb+a1CdIExzPmkUg2w25feUcYsUBb/p2MJr5SNWvopsDawsdjYK5owAcdWI3vWDihmoGvrkNqWlkh5FTjFC3H6Q8sOoSwR7YkPD2TQjjKpYv1Hw3suI4LparIETDBuaIiwo3JSQSWBIfgmaQ4bURQ5TqXVuvBLPg4a/7QtVLDQzd0NseR4XEQ/Mf9/iVA9euGyM5omO2Tklo7DnUY9fVlYERFWFPdpwdMkzkGzsp5FkoBqWb1z3vQFDF5JJjKjhKud15LA2zJG7YvAD+j6DWuxctA4j1ZmwCBwGVH/rQ1knd/foCGvQgFt1yK2L8CwdcszZHqtnx7EVJI3m1JWd1JGjMijl2e1Tu6K47miCDnq4DiwyOf8tNJlulUM//tWyv/3U7k33dX3phlorNaxwXcykWKr46dxy6Lq5qU1zvtp9cQJj6SzB0LQB3+EkMXvosHGtPDm5SxTcrWNy4NbtT+QoSdZmN/zQNOkQhJQ8dVb1bqVt/OUppdBRJPPRT4=
-#   bucket: "chrisipowellblog"
-#   key: chrisipowell_api.tar.gz
-#   application: ChrisBlog
-#   deployment_group: ChrisBlogGroup
-
-
-
+  bucket: chrisipowellblog
+- provider: codedeploy
+  access_key_id: AKIAJYVWMIGTHLUTVK6A
+  secret_access_key: *1
+  bucket: chrisipowellblog
+  key: chrisipowell_api.tar.gz
+  bundle_type: gzip
+  application: chrisipowell_api
+  deployment_group: ChrisBlogGroup
+  on: *2
 notifications:
   email: false

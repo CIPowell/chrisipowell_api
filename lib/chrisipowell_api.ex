@@ -10,6 +10,7 @@ defmodule ChrisipowellApi do
     children = [
       # Start the endpoint when the application starts
       supervisor(ChrisipowellApi.Endpoint, []),
+      supervisor(ChrisipowellApi.Repo, [])
       # Start your own worker by calling: ChrisipowellApi.Worker.start_link(arg1, arg2, arg3)
       # worker(ChrisipowellApi.Worker, [arg1, arg2, arg3]),
     ]
