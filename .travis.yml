@@ -32,7 +32,7 @@ deploy:
   key: chrisipowell_api.tar.gz
   skip_cleanup: true
   region: "eu-west-1"
-  bundle_type: gzip
+  bundle_type: tgz
   application: ChrisBlog
   deployment_group: ChrisBlogGroup
   on: *2
