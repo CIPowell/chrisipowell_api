@@ -13,7 +13,6 @@ config :chrisipowell_api, ChrisipowellApi.Repo,
   adapter: Ecto.Adapters.MySQL,
   database: "chrisipowell_api_repo",
   username: "root",
-  password: "password123",
+  password: "",
   hostname: "127.0.0.1",
-  port: 32769,
   pool: Ecto.Adapters.SQL.Sandbox
