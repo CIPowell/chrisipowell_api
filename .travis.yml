@@ -30,7 +30,7 @@ deploy:
   bucket: chrisipowellblog
   key: chrisipowell_api.tar.gz
   bundle_type: gzip
-  application: chrisipowell_api
+  application: ChrisBlog
   deployment_group: ChrisBlogGroup
   on: *2
 notifications:
