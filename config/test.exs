@@ -8,3 +8,11 @@ config :chrisipowell_api, ChrisipowellApi.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :chrisipowell_api, ChrisipowellApi.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  database: "chrisipowell_api_repo",
+  username: "",
+  password: "",
+  hostname: "127.0.0.1",
+  port: 32769

@@ -21,9 +21,10 @@ config :chrisipowell_api, ChrisipowellApi.Endpoint,
 config :chrisipowell_api, ChrisipowellApi.Repo,
   adapter: Ecto.Adapters.MySQL,
   database: "chrisipowell_api_repo",
-  username: "user",
-  password: "pass",
-  hostname: "localhost"
+  username: "root",
+  password: "password123",
+  hostname: "127.0.0.1",
+  port: 32769
 
 
 # Do not print debug messages in production
