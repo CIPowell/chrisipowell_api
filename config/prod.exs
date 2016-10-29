@@ -17,6 +17,15 @@ config :chrisipowell_api, ChrisipowellApi.Endpoint,
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
   version: Mix.Project.config[:version]
+
+config :chrisipowell_api, ChrisipowellApi.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  database: "chrisipowell_api_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
+
+
 # Do not print debug messages in production
 config :logger, level: :info
 

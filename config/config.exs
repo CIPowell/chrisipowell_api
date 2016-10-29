@@ -5,6 +5,9 @@
 # is restricted to this project.
 use Mix.Config
 
+config :chrisipowell_api,
+  ecto_repos: [ChrisipowellApi.Repo]
+
 # Configures the endpoint
 config :chrisipowell_api, ChrisipowellApi.Endpoint,
   url: [host: "localhost"],
@@ -12,8 +15,8 @@ config :chrisipowell_api, ChrisipowellApi.Endpoint,
   render_errors: [view: ChrisipowellApi.ErrorView, accepts: ~w(json)],
   pubsub: [name: ChrisipowellApi.PubSub,
            adapter: Phoenix.PubSub.PG2],
-  gettext: ChrisipowellApi.Gettext, default_locale: "en",
-  ecto_repos: [ChrisIPowellApi.Repo]
+  gettext: ChrisipowellApi.Gettext, default_locale: "en"
+
 
 # Configures Elixir's Logger
 config :logger, :console,

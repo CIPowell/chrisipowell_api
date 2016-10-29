@@ -17,7 +17,7 @@ defmodule ChrisipowellApi.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {ChrisipowellApi, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext]]
+     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :phoenix_ecto, :mariaex]]
   end
 
   # Specifies which paths to compile per environment.
