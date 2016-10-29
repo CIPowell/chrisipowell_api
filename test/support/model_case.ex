@@ -2,18 +2,18 @@ defmodule ChrisipowellApi.ModelCase do
   use ExUnit.CaseTemplate
   using do
     quote do
-      alias App.Repo
+      alias ChrisipowellApi.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
-      import App.ModelCase
+      import ChrisipowellApi.ModelCase
     end
   end
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(App.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(ChrisipowellApi.Repo, [])
     end
 
     :ok
