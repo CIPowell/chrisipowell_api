@@ -34,6 +34,7 @@ defmodule ChrisipowellApi.Mixfile do
      {:mariaex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
+     {:sqlite_ecto, "~> 1.1.0", only: :test, override: true},
      {:exrm, "~> 1.0"}]
   end
 end

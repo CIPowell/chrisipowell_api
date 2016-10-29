@@ -12,7 +12,6 @@ config :logger, level: :warn
 config :chrisipowell_api, ChrisipowellApi.Repo,
   adapter: Ecto.Adapters.MySQL,
   database: "chrisipowell_api_repo",
-  username: "",
+  username: "travis",
   password: "",
-  hostname: "127.0.0.1",
-  port: 32769
+  hostname: "127.0.0.1"

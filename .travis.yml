@@ -3,6 +3,10 @@ elixir:
 - 1.3.4
 otp:
 - 19.0.0
+
+services:
+- mysql
+
 script:
 - mix local.rebar --force
 - mix local.hex --force
