@@ -1,4 +1,4 @@
-%% script generated at {2016,10,22} {19,49,56}
+%% script generated at {2016,10,29} {21,24,12}
 {script,
     {"chrisipowell_api","0.0.1"},
     [{preLoaded,
@@ -141,7 +141,7 @@
           'Elixir.Logger.ErrorHandler','Elixir.Logger.Formatter',
           'Elixir.Logger.Translator','Elixir.Logger.Utils',
           'Elixir.Logger.Watcher']},
-     {path,["$ROOT/lib/gettext-0.12.0/ebin"]},
+     {path,["$ROOT/lib/gettext-0.12.1/ebin"]},
      {primLoad,
          ['Elixir.Gettext','Elixir.Gettext.Application',
           'Elixir.Gettext.Backend','Elixir.Gettext.Compiler',
@@ -330,7 +330,7 @@
      {path,
          ["$ROOT/lib/kernel-5.1/ebin","$ROOT/lib/stdlib-3.1/ebin",
           "$ROOT/lib/compiler-7.0.2/ebin","$ROOT/lib/elixir-1.3.4/ebin",
-          "$ROOT/lib/logger-1.3.4/ebin","$ROOT/lib/gettext-0.12.0/ebin",
+          "$ROOT/lib/logger-1.3.4/ebin","$ROOT/lib/gettext-0.12.1/ebin",
           "$ROOT/lib/crypto-3.7.1/ebin","$ROOT/lib/cowlib-1.0.2/ebin",
           "$ROOT/lib/ranch-1.2.1/ebin","$ROOT/lib/cowboy-1.0.4/ebin",
           "$ROOT/lib/phoenix_pubsub-1.0.1/ebin","$ROOT/lib/eex-1.3.4/ebin",
@@ -596,7 +596,7 @@
              [{application,gettext,
                   [{description,
                        "Internationalization and localization through gettext"},
-                   {vsn,"0.12.0"},
+                   {vsn,"0.12.1"},
                    {id,[]},
                    {modules,
                        ['Elixir.Gettext','Elixir.Gettext.Application',
