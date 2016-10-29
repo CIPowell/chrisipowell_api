@@ -23,12 +23,15 @@ deploy:
     secure: bIQSElWpsJFtPcT9HR/zH1rd6wJKH5+qfud/flGVQffMMH5wWaPI9s1YaWZfLMM28+ySjRgq4vpS5l2kJnx4F0nkPtW8/Kxwd44s425+mPPJXYzIdmH65YW72liJfNOwfgJQFHdQ0uPh93RFLpDEaXagNSYju4R3OgiZsffWYIS0BIYRUbfY1APPXZEeBxJo7Y38rsMX6IepOlBXW4P4tU32TDBs9mbC+8ixdkmeZY/qsrWz9Q2VJ79WN5xnXSR/VrYd5HrFzqdXb7BvYJ6f76zcGsrDtKrMoBSY6qdUX7+iK1DNfDzEw06BRktBO/DEktdccCc30nQG530EPsrYn16E9Psfk4DMkgeWZnsSrXQM5PpxBdC2m0dAgbkZbP3JbVvO+FCIaPgIcsPuJ7ogn6MMagjpKa6jv4CMG1F+JVgC4uDHFPp2fBLPXl17I7j9sLfFGATUMd/xcQeRXc3stTs5Sin6coiDu7HHg+yNi7Ih4wAMlB+Gv1qmM3QOVclmuxXjx42jVtKFvMzaCMm0+cmM1H5iOeRtLqa80Uj44ucc40kzSSNo78mciwGpFJAPd1+fCZAG+Q8wqILoqbG88XTefVSZk5MzSiSCqW9uHC+0vuwTDP0e6/qUvnH/96PMsgWXltMEXK/sewOLc/eduGBaeS9cgKSXkzLZcREy74k=
   local_dir: rel/chrisipowell_api/releases/0.0.1
   skip_cleanup: true
+  region: "eu-west-1"
   bucket: chrisipowellblog
 - provider: codedeploy
   access_key_id: AKIAJYVWMIGTHLUTVK6A
   secret_access_key: *1
   bucket: chrisipowellblog
   key: chrisipowell_api.tar.gz
+  skip_cleanup: true
+  region: "eu-west-1"
   bundle_type: gzip
   application: ChrisBlog
   deployment_group: ChrisBlogGroup
