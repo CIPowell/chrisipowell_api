@@ -18,7 +18,7 @@ script:
 - MIX_ENV=prod mix release
 
 before_deploy:
-  - cp appspec.yml rel/chrisipowell_api/
+  - cp deployment/* rel/chrisipowell_api/
   - mkdir -p aws_deploy
   - cd rel/chrisipowell_api && tar zcvf ../../aws_deploy/chrisipowell_api.tgz . && cd ../..
 
