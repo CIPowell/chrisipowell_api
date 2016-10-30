@@ -8,10 +8,12 @@
                         'Elixir.ChrisipowellApi.ErrorHelpers',
                         'Elixir.ChrisipowellApi.ErrorView',
                         'Elixir.ChrisipowellApi.Gettext',
+                        'Elixir.ChrisipowellApi.Post',
+                        'Elixir.ChrisipowellApi.Repo',
                         'Elixir.ChrisipowellApi.Router',
                         'Elixir.ChrisipowellApi.Router.Helpers',
                         'Elixir.ChrisipowellApi.UserSocket',
                         'Elixir.ChrisipowellApi.Web']},
               {mod,{'Elixir.ChrisipowellApi',[]}},
               {applications,[kernel,stdlib,elixir,phoenix,phoenix_pubsub,
-                             cowboy,logger,gettext]}]}.
+                             cowboy,logger,gettext,phoenix_ecto,mariaex]}]}.

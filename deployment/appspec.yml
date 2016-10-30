@@ -8,7 +8,5 @@ hooks:
     - location: after_install.sh
   ApplicationStart:
     - location: start.sh
-  ApplicationStop:
-    - location: stop.sh
   VerifyApplication:
     - location: ping.sh
