@@ -1,1 +1,1 @@
-/srv/chrisipowell_api/bin/chrisipowell_api start
+stop chrisipowell_api
