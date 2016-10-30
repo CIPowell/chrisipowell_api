@@ -1,3 +1,1 @@
-if ( initctl status chrisipowell_api | grep start ); then
-  initctl stop chrisipowell_api
-fi
+PORT=8888 /srv/chrisipowell_api/bin/chrisipowell_api stop
