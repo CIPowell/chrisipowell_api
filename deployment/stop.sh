@@ -1,1 +1,1 @@
-stop chrisipowell_api
+echo "stopping..."
