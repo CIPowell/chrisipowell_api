@@ -16,11 +16,10 @@ script:
 - mix test
 - MIX_ENV=prod mix compile
 - MIX_ENV=prod mix release
-
-before_deploy:
-  - cp deployment/* rel/chrisipowell_api/
-  - mkdir -p aws_deploy
-  - cd rel/chrisipowell_api && tar zcvf ../../aws_deploy/chrisipowell_api.tgz . && cd ../..
+- cp deployment/* rel/chrisipowell_api/
+- mkdir -p aws_deploy
+- cd rel/chrisipowell_api && tar zcvf ../../aws_deploy/chrisipowell_api.tgz . && cd ../..
+  
 
 deploy:
 - provider: s3

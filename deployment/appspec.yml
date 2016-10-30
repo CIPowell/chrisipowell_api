@@ -5,7 +5,7 @@ files:
     destination: /srv/chrisipowell_api
 hooks:
   AfterInstall:
-    - locaton: after_install.sh
+    - location: after_install.sh
   ApplicationStart:
     - location: start.sh
   ApplicationStop:
