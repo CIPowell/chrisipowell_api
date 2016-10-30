@@ -17,7 +17,7 @@ script:
 - MIX_ENV=prod mix compile
 - MIX_ENV=prod mix release
 
-beforedeploy:
+before_deploy:
   - cp appspec.yml rel/chrisipowell_api/
   - mkdir deploy
   - tar zcvf deploy/chrisipowell_api.tgz rel/chrisipowell_api/
