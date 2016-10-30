@@ -20,7 +20,7 @@ script:
 beforedeploy:
   - cp appspec.yml rel/chrisipowell_api/
   - mkdir deploy
-  - tar zcvf chrisipowell_api.tgz rel/chrisipowell_api/
+  - tar zcvf deploy/chrisipowell_api.tgz rel/chrisipowell_api/
 
 deploy:
 - provider: s3
@@ -35,7 +35,7 @@ deploy:
   access_key_id: AKIAJYVWMIGTHLUTVK6A
   secret_access_key: *1
   bucket: chrisipowellblog
-  key: /
+  key: deploy/chrisipowell_api.tgz
   skip_cleanup: true
   region: "eu-west-1"
   bundle_type: tgz
