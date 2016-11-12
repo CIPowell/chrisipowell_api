@@ -1,0 +1,12 @@
+[Unit]
+Description=Chris I Powell website api
+Documentation=
+
+[Service]
+Type=forking
+Environment=PORT=80
+ExecStart=/srv/chrisipowell_api/bin/chrisipowell_api start
+ExecStop=/srv/chrisipowell_api/bin/chrisipowell_api stop
+
+[Install]
+WantedBy=multi-user.target
