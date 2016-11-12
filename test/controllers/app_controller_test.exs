@@ -5,7 +5,7 @@ defmodule ChrisipowellApi.AppControllerTest do
     response = get(build_conn(), "/api")
        |> json_response(200)
 
-    expected = %{ "message" => "Hello World!" }
+    expected = %{ "application" => "chrisipowell_api", "version" => "0.2.0" }
 
     assert expected == response
   end
