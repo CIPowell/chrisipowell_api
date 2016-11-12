@@ -5,7 +5,7 @@ defmodule ChrisipowellApi.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ChrisipowellApi do
+  scope "/", ChrisipowellApi do
     pipe_through :api
 
     get "/", AppController, :index
